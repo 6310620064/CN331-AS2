@@ -4,7 +4,7 @@ from .models import Register, Subject
 
 #buid table in database
 class SubjectAdmin(admin.ModelAdmin):
-    list_display = ['code', 'subject_name' ,'semester' , 'academic_year' , 'quota' ,'student', 'status']
+    list_display = ['code', 'subject_name', 'semester', 'academic_year', 'quota', 'status']
     list_filter = ['status']
     search_fields = ['code' , 'subject_name']
 
@@ -13,6 +13,6 @@ class RegisterAdmin(admin.ModelAdmin):
     #subjects from def Student
 
 #Register your models here.
-admin.site.register(Register , RegisterAdmin)
+admin.site.register(Register, RegisterAdmin)
 admin.site.register(Subject, SubjectAdmin)
 
